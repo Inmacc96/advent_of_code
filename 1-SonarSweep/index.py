@@ -16,7 +16,7 @@ def n_increases(measurements):
 
     return cont
 
-print('Solution 1:' + n_increases(measurements))
+print('Solution 1: {}'.format(n_increases(measurements)))
 
 def n_sum_incresases(measurements):
     cont=0
@@ -35,8 +35,8 @@ def n_sum_incresases2(measurements):
         suma = sum(measurements[i:i+3])
     return cont
 
-print('Solution 2:' + n_sum_incresases(measurements))
-print('Solution 2:' + n_sum_incresases2(measurements))
+print('Solution 2: {}'.format(n_sum_incresases(measurements)))
+print('Solution 2.2: {}'.format(n_sum_incresases2(measurements)))
 
 
 

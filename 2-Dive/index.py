@@ -30,8 +30,8 @@ def position_depth2(filetext):
     depth=dicc['d'] - dicc['u']
     return (forward,depth,forward*depth)
 
-print('Solution 1:' + position_depth1('input.txt'))
-print('Solution 1:' + position_depth2('input.txt'))
+print('Solution 1: {}'.format(position_depth1('input.txt')))
+print('Solution 1.2: {}'.format(position_depth2('input.txt')))
 
 def position_depth_aim(filetext):
     planned_course = readInput(filetext)
@@ -48,4 +48,4 @@ def position_depth_aim(filetext):
             aim-=int(x[-1])
     return (forward,depth,forward*depth)
 
-print('Solution 2:' + position_depth_aim('input.txt'))
+print('Solution 2: {}'.format(position_depth_aim('input.txt')))
