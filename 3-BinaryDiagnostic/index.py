@@ -29,6 +29,45 @@ def power_consumption(filetxt):
 
 print('Solution 1: {}'.format(power_consumption('input.txt')))
 
+def life_support_rating(filetxt):
+    num_binary = readInput(filetxt)
+    oxygen_generator_rating = num_binary
+    CO2_scrubber_rating = num_binary
+    i=0
+    j=0
+    while len(oxygen_generator_rating) != 1:
+        cont_0 = 0
+        cont_1 = 0
+        for num in oxygen_generator_rating:
+            if list(num)[i] == '0':
+                cont_0 +=1
+            else:
+                cont_1 +=1
+        if cont_0 > cont_1:
+            oxygen_generator_rating = [num for num in oxygen_generator_rating if list(num)[i]=='0']
+        else:
+            oxygen_generator_rating = [num for num in oxygen_generator_rating if list(num)[i]=='1']
+        i+=1
+    
+    while len(CO2_scrubber_rating) != 1:
+        cont_0 = 0
+        cont_1 = 0
+        for num in CO2_scrubber_rating:
+            if list(num)[j] == '0':
+                cont_0 +=1
+            else:
+                cont_1 +=1
+        if cont_0 > cont_1:
+            CO2_scrubber_rating = [num for num in CO2_scrubber_rating if list(num)[j]=='1']
+        else:
+            CO2_scrubber_rating = [num for num in CO2_scrubber_rating if list(num)[j]=='0']
+        j+=1
+    
+    return (int(oxygen_generator_rating[0],2)*int(CO2_scrubber_rating[0],2))
+
+print('Solution 2: {}'.format(life_support_rating('input.txt')))
+        
+
 
 
 
