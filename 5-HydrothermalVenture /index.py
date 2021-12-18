@@ -33,12 +33,12 @@ def lines_map_create(lines):
                 else:
                     lines_map[i][line[0]] =1
 
-    return n_max,lines_map
+    return lines_map
 
 
 def n_overlap_points(filetxt):
     lines = readInput(filetxt)
-    n_max,lines_map = lines_map_create(lines)
+    lines_map = lines_map_create(lines)
     n_total_greater_2 = 0
     for row in lines_map:
         n_total_greater_2 += len([x for x in row if x>=2])
